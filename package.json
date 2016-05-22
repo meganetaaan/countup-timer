@@ -4,8 +4,10 @@
   "description": "Count-up timer module for node.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require intelli-espower-loader test/*.js",
-    "coverage": "istanbul cover _mocha test/*.js"
+		"test": "npm run test-coverage",
+    "test-nocoverage": "mocha --require intelli-espower-loader test/*.js",
+    "test-coverage": "istanbul cover _mocha test/*.js",
+		"coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
     "Node.js",
@@ -17,6 +19,7 @@
     "test": "test/"
   },
   "devDependencies": {
+    "coveralls": "^2.11.9",
     "esdoc": "^0.4.6",
     "intelli-espower-loader": "^1.0.1",
     "istanbul": "^0.4.3",
