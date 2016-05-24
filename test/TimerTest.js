@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   const assert = require('power-assert');
-  const Timer = require('..');
+  const Timer = require('../lib/Timer');
 
   describe('Timer', ()=>{
     describe('constructor', ()=>{
