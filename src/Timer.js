@@ -27,7 +27,7 @@
 
     reset(offset){
       this.stop();
-      this.current = this._last = this._pivot = current ? current : 0;
+      this.current = this._last = this._pivot = offset ? offset : 0;
       super.emit('reset', {milliseconds: this.current});
     }
 
